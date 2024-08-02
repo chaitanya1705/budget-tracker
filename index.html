@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Budget Tracker</title>
+</head>
+<body>
+  <h2>Budget Tracker</h2>
+
+  <div class="container">
+    <h4>Your Balance</h4>
+    <h1 id="balance">Rs.0.00</h1>
+    
+    <div class="inc-exp container">
+      <div>
+        <h4>Income</h4>
+        <p id="money-plus" class="money plus">+ Rs.0.00</p>
+      </div>
+      <div>
+        <h4>Expense</h4>
+        <p id="money-minus" class="money minus">Rs.0.00</p>
+      </div>
+    </div>
+
+    <h3>Add New Transaction</h3>
+    <form id="form">
+      
+      <div class="form-control">
+        <label for="amount-income">Income Amount</label>
+        <input type="number" id="amount-income" placeholder="Enter income amount&hellip;">
+      </div>
+      <div class="form-control">
+        <label for="amount-expense">Expense Amount</label>
+        <input type="number" id="amount-expense" placeholder="Enter expense amount&hellip;">
+      </div>
+      <div class="form-control">
+        <label for="category">Category</label>
+        <input type="text" id="category" placeholder="Enter category&hellip;">
+      </div>
+      <div class="form-control">
+        <label for="text">Transaction Name</label>
+        <input type="text" id="text" placeholder="Enter text&hellip;">
+      </div>
+      <div class="form-control">
+        <label for="date">Date</label>
+        <input type="date" id="date">
+      </div>
+      <button class="btn">Add Transaction</button>
+    </form>
+
+    <h3>Transaction History</h3>
+    <ul id="list" class="list"></ul>
+
+    <h3>Expense Breakdown (Weekly)</h3>
+    <canvas id="expense-bar-chart"></canvas>
+    <h3>Category Breakdown (Pie Chart)</h3>
+    <canvas id="expense-pie-chart"></canvas>
+  </div> 
+ <!-- Login Popup -->
+<div id="login-popup" class="popup-overlay">
+    <div class="popup-content">
+      <h2 id="popup-title">Login</h2>
+      <form id="login-form">
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username&hellip;">
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password&hellip;">
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <button type="button" id="register-toggle" class="btn">Register</button>
+        <button type="button" id="close-login" class="btn">Close</button>
+      </form>
+      <form id="register-form" style="display: none;">
+        <div class="form-control">
+          <label for="register-username">Username</label>
+          <input type="text" id="register-username" placeholder="Enter your username&hellip;">
+        </div>
+        <div class="form-control">
+          <label for="register-password">Password</label>
+          <input type="password" id="register-password" placeholder="Enter your password&hellip;">
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <button type="button" id="login-toggle" class="btn">Login</button>
+      </form>
+    </div>
+  </div>
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
